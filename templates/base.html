@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YemekSipariş</title>
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">Y</div>
+                    <span class="logo-text">YemekSipariş</span>
+                </a>
+
+                <form class="search-form desktop-search">
+                    <div class="search-input-wrapper">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" placeholder="Restoran veya yemek ara...">
+                    </div>
+                </form>
+
+                <div class="nav-right">
+                    <a href="/cart" class="cart-link">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="cart-badge">2</span>
+                    </a>
+
+                    <div class="user-menu">
+                        <button id="userMenuBtn" class="user-btn">
+                            <i data-lucide="user"></i>
+                            <span class="user-name">Kullanıcı Adı</span>
+                        </button>
+                        <div id="userDropdown" class="dropdown-content hidden">
+                            <a href="/order-history"><i data-lucide="history"></i> Sipariş Geçmişi</a>
+                            <button class="logout-btn"><i data-lucide="log-out"></i> Çıkış Yap</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-search">
+                <form class="search-form">
+                    <div class="search-input-wrapper">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" placeholder="Restoran veya yemek ara...">
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div style="padding: 2rem; text-align: center; color: #666;">
+                Sayfa İçeriği (Outlet)
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>YemekSipariş</h3>
+                    <p>En sevdiğiniz restoranlardan hızlı ve güvenli sipariş.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Kurumsal</h4>
+                    <ul>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Yardım</h4>
+                    <ul>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Gizlilik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>İşletmeler İçin</h4>
+                    <ul>
+                        <li><a href="#">Restoran Kayıt</a></li>
+                        <li><a href="#">Kurye Ol</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 YemekSipariş. Tüm hakları saklıdır.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../static/js/layout.js"></script>
+</body>
+</html>
