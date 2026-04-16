@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol | YemekSipariş</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-card-wrapper">
+            <div class="register-header">
+                <h1>Kayıt Ol</h1>
+                <p>Yeni hesap oluşturun</p>
+            </div>
+
+            <div class="register-card">
+                <div id="errorMessage" class="error-box hidden">
+                    <i data-lucide="alert-circle" class="error-icon"></i>
+                    <span id="errorText">Lütfen tüm alanları doldurun</span>
+                </div>
+
+                <form id="registerForm" class="space-y-4">
+                    <div class="input-group">
+                        <label for="name">Ad Soyad</label>
+                        <div class="input-relative">
+                            <input type="text" id="name" placeholder="Adınız Soyadınız">
+                            <i data-lucide="user" class="input-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <div class="input-relative">
+                            <input type="email" id="email" placeholder="ornek@email.com">
+                            <i data-lucide="mail" class="input-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Şifre</label>
+                        <div class="input-relative">
+                            <input type="password" id="password" placeholder="••••••••">
+                            <i data-lucide="lock" class="input-icon"></i>
+                        </div>
+                        <p class="helper-text">En az 6 karakter</p>
+                    </div>
+
+                    <button type="submit" class="register-btn">Kayıt Ol</button>
+                </form>
+
+                <div class="login-redirect">
+                    <p>Zaten hesabınız var mı? <a href="/login">Giriş Yap</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/register.js"></script>
+</body>
+</html>

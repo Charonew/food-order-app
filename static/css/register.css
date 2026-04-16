@@ -1,0 +1,127 @@
+/* --- Genel Ayarlar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Taşmayı engelleyen kritik satır */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.register-card-wrapper {
+    width: 100%;
+    max-width: 400px; /* Kartın maksimum genişliği */
+}
+
+/* --- Başlık --- */
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* --- Kart Yapısı --- */
+.register-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 100%; /* Dışarı taşmaması için */
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.input-relative {
+    position: relative;
+    width: 100%;
+}
+
+/* --- Inputlardaki Taşmayı Bitiren Kısım --- */
+.input-relative input {
+    width: 100%; /* Genişlik tam olsun */
+    padding: 0.75rem 1rem 0.75rem 2.75rem; /* Sol tarafa ikon boşluğu */
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+    display: block; /* Inline-block sorunlarını çözer */
+}
+
+.input-relative input:focus {
+    border-color: #6B1D0E;
+    box-shadow: 0 0 0 3px rgba(107, 29, 14, 0.1);
+}
+
+.input-icon {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    width: 18px;
+    height: 18px;
+}
+
+/* --- Buton --- */
+.register-btn {
+    width: 100%;
+    background-color: #6B1D0E;
+    color: white;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.register-btn:hover {
+    background-color: #521609;
+}
+
+.login-redirect {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.login-redirect a {
+    color: #6B1D0E;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none !important;
+}
