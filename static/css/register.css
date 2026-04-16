@@ -1,8 +1,7 @@
-/* --- Genel Ayarlar --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Taşmayı engelleyen kritik satır */
+    box-sizing: border-box;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -23,7 +22,7 @@ body {
 
 .register-card-wrapper {
     width: 100%;
-    max-width: 400px; /* Kartın maksimum genişliği */
+    max-width: 400px; 
 }
 
 /* --- Başlık --- */
@@ -38,7 +37,6 @@ body {
     color: #111827;
 }
 
-/* --- Kart Yapısı --- */
 .register-card {
     background: white;
     padding: 2rem;
@@ -64,7 +62,6 @@ body {
     width: 100%;
 }
 
-/* --- Inputlardaki Taşmayı Bitiren Kısım --- */
 .input-relative input {
     width: 100%; /* Genişlik tam olsun */
     padding: 0.75rem 1rem 0.75rem 2.75rem; /* Sol tarafa ikon boşluğu */
@@ -91,7 +88,6 @@ body {
     height: 18px;
 }
 
-/* --- Buton --- */
 .register-btn {
     width: 100%;
     background-color: #6B1D0E;

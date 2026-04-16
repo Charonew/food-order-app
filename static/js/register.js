@@ -13,7 +13,7 @@ registerForm.addEventListener('submit', (e) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    // Frontend Doğrulaması (React kodundaki mantık)
+    // Frontend Doğrulaması 
     if (!name || !email || !password) {
         showError('Lütfen tüm alanları doldurun');
         return;
