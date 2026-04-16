@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap | YemekSipariş</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="login-header">
+                <h1>Giriş Yap</h1>
+                <p>Hesabınıza giriş yapın</p>
+            </div>
+
+            <div class="login-card">
+                <div id="errorAlert" class="error-alert hidden">
+                    <i data-lucide="alert-circle" class="error-icon"></i>
+                    <span id="errorMsg"></span>
+                </div>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <div class="relative-input">
+                            <input type="email" id="email" placeholder="ornek@email.com">
+                            <i data-lucide="mail" class="field-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Şifre</label>
+                        <div class="relative-input">
+                            <input type="password" id="password" placeholder="••••••••">
+                            <i data-lucide="lock" class="field-icon"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Giriş Yap</button>
+                </form>
+
+                <div class="footer-link">
+                    <p>Hesabınız yok mu? <a href="register.html">Kayıt Ol</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/login.js"></script>
+</body>
+</html>
