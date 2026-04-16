@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YemekSipariş | Anasayfa</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="home-container">
+        
+        <section class="hero-section">
+            <div class="hero-placeholder">
+            </div>  
+        </section>
+
+        <section class="categories-section">
+            <h2 class="section-title">Kategoriler</h2>
+            <div class="category-list" id="categoryList">
+                <button class="category-btn active" data-category="Tümü">Tümü</button>
+                <button class="category-btn" data-category="Kebap">Kebap</button>
+                <button class="category-btn" data-category="Pizza">Pizza</button>
+                <button class="category-btn" data-category="Burger">Burger</button>
+                <button class="category-btn" data-category="Tatlı">Tatlı</button>
+                <button class="category-btn" data-category="Deniz Ürünleri">Deniz Ürünleri</button>
+            </div>
+        </section>
+
+        <div id="searchInfo" class="search-results-info hidden">
+            <p>"<span id="searchTerm" class="highlight"></span>" için <span id="resultCount" class="highlight"></span> sonuç bulundu</p>
+        </div>
+
+        <section class="restaurants-section">
+            <h2 class="section-title" id="listTitle">Tüm Restoranlar</h2>
+            
+            <div class="restaurant-grid" id="restaurantGrid">
+                </div>
+
+            <div id="noResults" class="no-results hidden">
+                <p>Sonuç bulunamadı</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../static/js/home.js"></script>
+</body>
+</html>
