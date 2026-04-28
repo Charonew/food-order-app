@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sipariş Tamamla | YemekSipariş</title>
+    <link rel="stylesheet" href="../static/css/checkout.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="checkout-container">
+        <h1 class="page-title">Sipariş Tamamla</h1>
+
+        <form id="checkoutForm" class="checkout-form">
+            <div id="errorBox" class="alert-box alert-error hidden">
+                <i data-lucide="alert-circle" class="alert-icon"></i>
+                <span id="errorMessage" class="alert-text"></span>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <i data-lucide="map-pin" class="section-icon"></i>
+                    <h2 class="section-title">Teslimat Adresi</h2>
+                </div>
+                
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="city">İl</label>
+                        <input type="text" id="city" placeholder="İstanbul">
+                    </div>
+                    <div class="input-group">
+                        <label for="district">İlçe</label>
+                        <input type="text" id="district" placeholder="Kadıköy">
+                    </div>
+                </div>
+                <div class="input-group full-width">
+                    <label for="address">Adres</label>
+                    <textarea id="address" rows="3" placeholder="Mahalle, sokak, bina no, daire no..."></textarea>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">
+                    <i data-lucide="credit-card" class="section-icon"></i>
+                    <h2 class="section-title">Ödeme Bilgileri</h2>
+                </div>
+                
+                <div class="alert-box alert-warning">
+                    <span class="alert-text">⚠️ Bu demo bir uygulamadır. Gerçek ödeme bilgilerinizi girmeyiniz.</span>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="cardNumber">Kart Numarası</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="16">
+                </div>
+                <div class="input-group full-width">
+                    <label for="cardName">Kart Üzerindeki İsim</label>
+                    <input type="text" id="cardName" placeholder="AD SOYAD">
+                </div>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="expiry">Son Kullanma Tarihi</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="input-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2 class="section-title mb-4">Sipariş Özeti</h2>
+                <div id="orderItems" class="order-items-list"></div>
+                
+                <div class="summary-footer">
+                    <div class="summary-row">
+                        <span>Ara Toplam</span>
+                        <span id="subtotalDisplay">₺0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Teslimat</span>
+                        <span id="deliveryDisplay">₺15.00</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Toplam</span>
+                        <span id="totalDisplay">₺0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Siparişi Tamamla</button>
+        </form>
+    </div>
+
+    <script src="../static/js/checkout.js"></script>
+</body>
+</html>
