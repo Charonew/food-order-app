@@ -1,0 +1,113 @@
+/* Genel Ayarlar */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background-color: #f9fafb; color: #111827; }
+
+.container { max-width: 80rem; margin: 0 auto; padding: 2rem 1rem; }
+.text-center { text-align: center; }
+.text-gray-600 { color: #4b5563; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+
+/* Bildirim (Notification) */
+.notification {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    background-color: #10b981;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: slideIn 0.3s ease-out forwards;
+}
+.notification.hidden { display: none; }
+@keyframes slideIn {
+    from { transform: translateY(-1rem); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Restoran Üst Bilgisi (Header) */
+.restaurant-header {
+    background-color: white;
+    border-radiuSs: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.header-image-wrapper { position: relative; height: 16rem; }
+@media (min-width: 768px) { .header-image-wrapper { height: 20rem; } }
+
+.header-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.header-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    color: white;
+}
+.header-title { font-size: 1.875rem; font-weight: 700; margin-bottom: 0.5rem; }
+@media (min-width: 768px) { .header-title { font-size: 2.25rem; } }
+.header-desc { font-size: 1.125rem; opacity: 0.9; margin-bottom: 0.75rem; }
+
+.header-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.meta-item { display: flex; align-items: center; gap: 0.25rem; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+
+/* Menü Bölümü */
+.menu-title { font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 1.5rem; }
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+@media (min-width: 768px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .menu-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Menü Kartı */
+.menu-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s;
+}
+.menu-card:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+.card-image-wrapper { position: relative; height: 12rem; }
+.card-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.card-body { padding: 1rem; }
+.card-title { font-weight: 700; font-size: 1.125rem; color: #111827; margin-bottom: 0.25rem; }
+.card-desc { color: #4b5563; font-size: 0.875rem; margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.card-footer { display: flex; align-items: center; justify-content: space-between; }
+.card-price { font-size: 1.25rem; font-weight: 700; color: #6B1D0E; }
+.btn-add {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #6B1D0E;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-add:hover { background-color: #521609; }
+
+/* Lucide İkon Boyutlandırma Düzeltmesi */
+svg.lucide { width: 20px; height: 20px; }
