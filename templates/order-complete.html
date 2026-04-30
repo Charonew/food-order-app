@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sipariş Alındı | YemekSipariş</title>
+    <link rel="stylesheet" href="../static/css/order-complete.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="complete-container">
+        <div class="complete-card">
+            <div class="icon-wrapper">
+                <i data-lucide="check-circle" class="success-icon"></i>
+            </div>
+            
+            <h1 class="page-title">Siparişiniz Alındı!</h1>
+            <p class="page-desc">Teşekkür ederiz. Siparişiniz başarıyla oluşturuldu ve en kısa sürede hazırlanacak.</p>
+
+            <div class="order-id-box">
+                <p class="order-id-label">Sipariş Numaranız</p>
+                <p id="orderIdDisplay" class="order-id-number">N/A</p>
+            </div>
+
+            <div class="status-box">
+                <h2 class="status-title">Sipariş Durumu</h2>
+                <div class="status-list">
+                    <div class="status-item">
+                        <div class="status-dot dot-green"></div>
+                        <span class="status-text text-dark">Sipariş Alındı</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-dot dot-brand"></div>
+                        <span class="status-text text-dark">Hazırlanıyor</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-dot dot-gray"></div>
+                        <span class="status-text text-muted">Yolda</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-dot dot-gray"></div>
+                        <span class="status-text text-muted">Teslim Edildi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="../templates/index.html" class="btn btn-primary">
+                    <i data-lucide="home" class="btn-icon"></i>
+                    <span>Ana Sayfaya Dön</span>
+                </a>
+                <a href="../templates/order-history.html" class="btn btn-secondary">
+                    <i data-lucide="history" class="btn-icon"></i>
+                    <span>Siparişlerim</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/order-complete.js"></script>
+</body>
+</html>
